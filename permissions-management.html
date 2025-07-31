@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إدارة الصلاحيات - مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+
+  <!-- رأس الصفحة -->
+  <header class="bg-purple-700 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">إدارة صلاحيات المستخدمين</h1>
+    <p class="mt-1 text-sm">قم بتحديد الصلاحيات الممنوحة لكل دور مستخدم</p>
+  </header>
+
+  <!-- أزرار العودة -->
+  <div class="flex flex-wrap justify-center gap-4 my-6 px-4">
+    <a href="admin_dashboard.html" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded shadow">📊 لوحة التحكم</a>
+    <a href="index.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow">🏠 الصفحة الرئيسية</a>
+    <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded shadow">🚪 تسجيل الخروج</a>
+  </div>
+
+  <!-- جدول الصلاحيات -->
+  <main class="p-6 max-w-5xl mx-auto">
+    <div class="overflow-x-auto bg-white p-4 rounded shadow">
+      <table class="min-w-full text-sm text-center">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="p-2">الصفحة / الوظيفة</th>
+            <th class="p-2">المدير</th>
+            <th class="p-2">المحفظ</th>
+            <th class="p-2">ولي الأمر / الطالب</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr>
+            <td class="p-2">إدارة المستخدمين</td>
+            <td><input type="checkbox" checked disabled></td>
+            <td><input type="checkbox" disabled></td>
+            <td><input type="checkbox" disabled></td>
+          </tr>
+          <tr>
+            <td class="p-2">إضافة النتائج</td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" disabled></td>
+          </tr>
+          <tr>
+            <td class="p-2">عرض تقرير الطالب</td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+          </tr>
+          <tr>
+            <td class="p-2">إدارة الحلقات</td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox" disabled></td>
+          </tr>
+          <tr>
+            <td class="p-2">تعديل معلومات الطالب</td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" disabled></td>
+          </tr>
+          <tr>
+            <td class="p-2">تصدير النتائج</td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-center mt-6">
+      <button class="bg-purple-700 hover:bg-purple-800 text-white px-6 py-2 rounded shadow">💾 حفظ الصلاحيات</button>
+    </div>
+  </main>
+
+  <!-- التذييل -->
+  <footer class="bg-purple-700 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+
+</body>
+</html>

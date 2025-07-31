@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>إدارة المحفظين - مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+
+  <!-- رأس الصفحة -->
+  <header class="bg-emerald-700 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">👨‍🏫 إدارة المحفظين</h1>
+    <p class="mt-1 text-sm">عرض وتعديل بيانات المحفظين العاملين في المركز</p>
+  </header>
+
+  <!-- أزرار العودة -->
+  <div class="flex flex-wrap justify-center gap-4 my-6 px-4">
+    <a href="index.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow">🏠 الصفحة الرئيسية</a>
+    <a href="admin_dashboard.html" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded shadow">📊 لوحة التحكم</a>
+    <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded shadow">🚪 تسجيل الخروج</a>
+  </div>
+
+  <!-- المحتوى -->
+  <main class="max-w-6xl mx-auto bg-white p-6 rounded shadow">
+
+    <!-- أدوات التحكم -->
+    <div class="flex justify-between items-center mb-4">
+      <input type="text" placeholder="🔍 ابحث باسم المحفظ..." class="border rounded px-4 py-2 w-full max-w-md">
+      <a href="add-teacher.html" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded shadow ml-4">➕ إضافة محفظ جديد</a>
+    </div>
+
+    <!-- جدول المحفظين -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm text-center border border-gray-300">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="p-2 border">الاسم</th>
+            <th class="p-2 border">الحلقة</th>
+            <th class="p-2 border">رقم الهاتف</th>
+            <th class="p-2 border">الإجراءات</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y">
+          <tr>
+            <td class="p-2 border">الشيخ عبد الله ناصر</td>
+            <td class="p-2 border">الفرقان</td>
+            <td class="p-2 border">965-99999999</td>
+            <td class="p-2 border space-x-2 space-x-reverse">
+              <a href="view-teacher.html" class="text-blue-600 hover:underline">عرض</a>
+              <a href="edit-teacher.html" class="text-yellow-600 hover:underline">تعديل</a>
+              <button class="text-red-600 hover:underline">حذف</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- التذييل -->
+  <footer class="bg-emerald-700 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+
+</body>
+</html>

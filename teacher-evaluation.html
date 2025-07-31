@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تقييم المحفظين - مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+
+  <!-- رأس الصفحة -->
+  <header class="bg-emerald-700 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">📋 تقييم المحفظين</h1>
+    <p class="mt-1 text-sm">قم بتقييم أداء المحفظين وإضافة الملاحظات اللازمة</p>
+  </header>
+
+  <!-- أزرار العودة -->
+  <div class="flex flex-wrap justify-center gap-4 my-6 px-4">
+    <a href="manage-teachers.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">👨‍🏫 إدارة المحفظين</a>
+    <a href="admin_dashboard.html" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded shadow">📊 لوحة التحكم</a>
+    <a href="index.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow">🏠 الصفحة الرئيسية</a>
+    <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded shadow">🚪 تسجيل الخروج</a>
+  </div>
+
+  <!-- المحتوى -->
+  <main class="max-w-6xl mx-auto bg-white p-6 rounded shadow">
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm text-center border border-gray-300">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="p-2 border">اسم المحفظ</th>
+            <th class="p-2 border">التقييم العام</th>
+            <th class="p-2 border">ملاحظات</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y">
+          <tr>
+            <td class="p-2 border">الشيخ عبد الله</td>
+            <td class="p-2 border">
+              <select class="border rounded px-2 py-1">
+                <option>ممتاز</option>
+                <option>جيد جداً</option>
+                <option>جيد</option>
+                <option>مقبول</option>
+              </select>
+            </td>
+            <td class="p-2 border">
+              <input type="text" class="w-full border rounded px-2 py-1" placeholder="أدخل ملاحظات">
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 border">الشيخ يوسف أحمد</td>
+            <td class="p-2 border">
+              <select class="border rounded px-2 py-1">
+                <option>ممتاز</option>
+                <option>جيد جداً</option>
+                <option>جيد</option>
+                <option>مقبول</option>
+              </select>
+            </td>
+            <td class="p-2 border">
+              <input type="text" class="w-full border rounded px-2 py-1" placeholder="أدخل ملاحظات">
+            </td>
+          </tr>
+          <!-- المزيد من الصفوف عند الحاجة -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-center mt-6">
+      <button class="bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-2 rounded shadow">💾 حفظ التقييمات</button>
+    </div>
+  </main>
+
+  <!-- التذييل -->
+  <footer class="bg-emerald-700 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+
+</body>
+</html>

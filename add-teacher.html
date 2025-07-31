@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إضافة محفظ جديد - مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-green-700 text-white text-center p-6">
+    <h1 class="text-2xl font-bold">إضافة محفظ جديد</h1>
+  </header>
+
+  <main class="max-w-xl mx-auto bg-white mt-6 p-6 rounded shadow">
+    <form class="space-y-4">
+      <div>
+        <label class="block mb-1">الاسم الكامل</label>
+        <input type="text" class="w-full border rounded px-4 py-2" required>
+      </div>
+      <div>
+        <label class="block mb-1">نوع الحلقة</label>
+        <select class="w-full border rounded px-4 py-2" required>
+          <option value="">اختر النوع</option>
+          <option>نموذجية</option>
+          <option>نخبة</option>
+          <option>إجازة</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-1">الجنس</label>
+        <select class="w-full border rounded px-4 py-2" required>
+          <option value="">اختر الجنس</option>
+          <option>ذكر</option>
+          <option>أنثى</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-1">الحالة</label>
+        <select class="w-full border rounded px-4 py-2" required>
+          <option>مباشر</option>
+          <option>غير مباشر</option>
+        </select>
+      </div>
+      <div class="text-center pt-4">
+        <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">💾 حفظ المحفظ</button>
+      </div>
+    </form>
+<div class="flex flex-wrap justify-center gap-4 my-6">
+  <a href="manage-teachers.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">🔙 إدارة المحفظين</a>
+  <a href="admin_dashboard.html" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded shadow">📊 لوحة التحكم</a>
+  <a href="index.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow">🏠 الصفحة الرئيسية</a>
+  <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded shadow">🚪 تسجيل الخروج</a>
+</div>
+
+  </main>
+
+  <footer class="bg-green-700 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+</body>
+</html>

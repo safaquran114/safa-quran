@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تعديل نتيجة اختبار - مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans min-h-screen">
+
+  <!-- رأس الصفحة -->
+  <header class="bg-rose-700 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">✏️ تعديل نتيجة اختبار</h1>
+    <p class="mt-1 text-sm">قم بتحديث درجات الطالب حسب الاختبار</p>
+  </header>
+
+  <!-- نموذج التعديل -->
+  <main class="max-w-2xl mx-auto bg-white mt-10 p-6 rounded shadow space-y-5">
+
+    <div>
+      <label class="block font-medium mb-1">اسم الطالب</label>
+      <input type="text" value="عبدالله خالد" disabled class="w-full border rounded px-4 py-2 bg-gray-100">
+    </div>
+
+    <div>
+      <label class="block font-medium mb-1">نوع الاختبار</label>
+      <select class="w-full border rounded px-4 py-2">
+        <option selected>اختبار نهاية الفصل</option>
+        <option>اختبار شهري</option>
+        <option>اختبار تحريري</option>
+        <option>اختبار شفوي</option>
+      </select>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block font-medium mb-1">الدرجة الكلية</label>
+        <input type="number" class="w-full border rounded px-4 py-2" value="100">
+      </div>
+      <div>
+        <label class="block font-medium mb-1">درجة الطالب</label>
+        <input type="number" class="w-full border rounded px-4 py-2" value="85">
+      </div>
+    </div>
+
+    <div>
+      <label class="block font-medium mb-1">ملاحظات</label>
+      <textarea rows="3" class="w-full border rounded px-4 py-2">أداء متميز مع بعض الأخطاء البسيطة.</textarea>
+    </div>
+
+    <div class="text-center pt-4">
+      <button onclick="saveEdit()" class="bg-rose-700 hover:bg-rose-800 text-white px-6 py-2 rounded shadow">
+        💾 حفظ التعديل
+      </button>
+    </div>
+
+  </main>
+
+  <!-- تذييل -->
+  <footer class="bg-rose-700 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <!-- سكريبت -->
+  <script>
+    function saveEdit() {
+      alert("✅ تم تعديل نتيجة الاختبار بنجاح.");
+      // يمكن الربط بقاعدة بيانات هنا لاحقًا
+    }
+  </script>
+
+</body>
+</html>

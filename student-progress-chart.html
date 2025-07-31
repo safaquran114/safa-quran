@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>رسم بياني لتقدم الطالب</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2a7ae4;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    canvas {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>الرسم البياني لتقدم الطالب</h2>
+
+    <label for="student">اختر الطالب:</label>
+    <select id="student">
+      <option value="default">-- اختر الطالب --</option>
+      <option value="ahmad">أحمد محمد</option>
+      <option value="sara">سارة خالد</option>
+    </select>
+
+    <canvas id="progressChart"></canvas>
+  </div>
+
+  <script>
+    const ctx = document.getElementById("progressChart").getContext("2d");
+
+    const chartData = {
+      ahmad: {
+        labels: ["دورة محرم", "دورة ربيع", "دورة رمضان", "دورة ذو القعدة"],
+        datasets: [
+          {
+            label: "الحفظ",
+            data: [70, 80, 85, 90],
+            borderColor: "#2a7ae4",
+            backgroundColor: "#2a7ae4",
+            fill: false,
+            tension: 0.2,
+          },
+          {
+            label: "التجويد",
+            data: [60, 70, 75, 80],
+            borderColor: "#f39c12",
+            backgroundColor: "#f39c12",
+            fill: false,
+            tension: 0.2,
+          },
+          {
+            label: "الحضور",
+            data: [90, 95, 92, 98],
+            borderColor: "#27ae60",
+            backgroundColor: "#27ae60",
+            fill: false,
+            tension: 0.2,
+          },
+        ],
+      },
+      sara: {
+        labels: ["دورة محرم", "دورة ربيع", "دورة رمضان", "دورة ذو القعدة"],
+        datasets: [
+          {
+            label: "الحفظ",
+            data: [60, 65, 70, 80],
+            borderColor: "#2a7ae4",
+            backgroundColor: "#2a7ae4",
+            fill: false,
+            tension: 0.2,
+          },
+          {
+            label: "التجويد",
+            data: [50, 55, 60, 70],
+            borderColor: "#f39c12",
+            backgroundColor: "#f39c12",
+            fill: false,
+            tension: 0.2,
+          },
+          {
+            label: "الحضور",
+            data: [85, 88, 90, 95],
+            borderColor: "#27ae60",
+            backgroundColor: "#27ae60",
+            fill: false,
+            tension: 0.2,
+          },
+        ],
+      },
+    };
+
+    let currentChart;
+
+    document.getElementById("student").addEventListener("change", function () {
+      const selected = this.value;
+
+      if (currentChart) {
+        currentChart.destroy();
+      }
+
+      if (chartData[selected]) {
+        currentChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: chartData[selected].labels,
+            datasets: chartData[selected].datasets,
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "bottom",
+              },
+              title: {
+                display: true,
+                text: "مستوى الطالب حسب الدورة",
+              },
+            },
+          },
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 font-sans min-h-screen">
+
+  <!-- رأس الصفحة -->
+  <header class="bg-green-700 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">مركز الصفا القرآني</h1>
+    <p class="mt-2 text-sm">بوابتك لإدارة التعليم القرآني</p>
+    <div class="mt-4 flex justify-center gap-4">
+      <a href="about.html" class="bg-white text-green-800 px-5 py-2 rounded shadow hover:bg-green-100">📘 عن المركز</a>
+      <button onclick="toggleLogin()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded shadow">تسجيل الدخول</button>
+    </div>
+  </header>
+
+  <!-- نموذج تسجيل الدخول -->
+  <main class="max-w-md mx-auto mt-10 bg-white p-6 rounded shadow hidden" id="loginBox">
+    <h2 class="text-xl font-bold mb-4 text-center text-gray-700">تسجيل الدخول</h2>
+    <label class="block mb-2 font-medium">اختر نوع المستخدم:</label>
+    <select id="userType" class="w-full mb-4 border rounded px-4 py-2">
+      <option value="">-- اختر --</option>
+      <option value="admin">مدير</option>
+      <option value="teacher">محفظ</option>
+      <option value="student">طالب / ولي أمر</option>
+    </select>
+
+    <label class="block mb-2 font-medium">كلمة المرور:</label>
+    <input type="password" id="password" class="w-full mb-4 border rounded px-4 py-2" placeholder="••••••">
+
+    <button onclick="login()" class="bg-green-700 hover:bg-green-800 text-white px-6 py-2 w-full rounded shadow">
+      دخول
+    </button>
+  </main>
+
+  <!-- تذييل -->
+  <footer class="bg-green-700 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <!-- سكريبت -->
+  <script>
+    function toggleLogin() {
+      const box = document.getElementById("loginBox");
+      box.classList.toggle("hidden");
+    }
+
+    function login() {
+      const type = document.getElementById("userType").value;
+      const pass = document.getElementById("password").value;
+
+      const passwords = {
+        admin: "admin123",
+        teacher: "teacher123",
+        student: "student123"
+      };
+
+      if (pass === passwords[type]) {
+        if (type === "admin") window.location.href = "dashboard.html";
+        else if (type === "teacher") window.location.href = "teacher_dashboard.html";
+        else if (type === "student") window.location.href = "student_dashboard.html";
+      } else {
+        alert("❌ كلمة المرور غير صحيحة أو لم يتم اختيار الدور.");
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>إحصائيات الحضور - مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+
+  <!-- رأس الصفحة -->
+  <header class="bg-blue-800 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">📊 إحصائيات الحضور</h1>
+    <p class="mt-1 text-sm">عرض نسب الحضور والغياب لكل حلقة أو طالب</p>
+  </header>
+
+  <!-- المحتوى -->
+  <main class="p-6 max-w-6xl mx-auto bg-white mt-8 rounded shadow space-y-6">
+
+    <!-- اختيار الحلقة -->
+    <div>
+      <label for="classSelect" class="block font-medium mb-1">اختر الحلقة</label>
+      <select id="classSelect" class="w-full border rounded px-4 py-2">
+        <option>كل الحلقات</option>
+        <option>حلقة الفرقان</option>
+        <option>حلقة النور</option>
+        <option>حلقة الإتقان</option>
+      </select>
+    </div>
+
+    <!-- جدول الإحصائيات -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-center border mt-4">
+        <thead class="bg-gray-100 text-gray-700">
+          <tr>
+            <th class="p-2 border">#</th>
+            <th class="p-2 border">اسم الطالب</th>
+            <th class="p-2 border">عدد الأيام</th>
+            <th class="p-2 border">عدد الحضور</th>
+            <th class="p-2 border">عدد الغياب</th>
+            <th class="p-2 border">نسبة الحضور</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-2 border">1</td>
+            <td class="p-2 border">عبدالله أحمد</td>
+            <td class="p-2 border">20</td>
+            <td class="p-2 border">18</td>
+            <td class="p-2 border">2</td>
+            <td class="p-2 border text-green-600 font-semibold">90%</td>
+          </tr>
+          <tr>
+            <td class="p-2 border">2</td>
+            <td class="p-2 border">سلمان يوسف</td>
+            <td class="p-2 border">20</td>
+            <td class="p-2 border">15</td>
+            <td class="p-2 border">5</td>
+            <td class="p-2 border text-yellow-600 font-semibold">75%</td>
+          </tr>
+          <!-- المزيد من الصفوف -->
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- تذييل -->
+  <footer class="bg-blue-800 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+
+
+<!-- إضافة عنصر الرسم -->
+<div class="max-w-md mx-auto my-10 bg-white p-6 rounded shadow">
+  <h2 class="text-xl font-bold text-center mb-4 text-emerald-700">نسبة الحضور والغياب</h2>
+  <canvas id="attendanceChart" width="300" height="300"></canvas>
+</div>
+
+<!-- سكربت الرسم البياني -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('attendanceChart').getContext('2d');
+  const attendanceChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['حضور', 'غياب'],
+      datasets: [{
+        label: 'نسبة الحضور',
+        data: [75, 25],
+        backgroundColor: ['#10B981', '#EF4444'],
+        borderColor: ['#fff', '#fff'],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom',
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

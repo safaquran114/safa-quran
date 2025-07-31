@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>عرض نتائج الاختبارات - مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+
+  <!-- رأس الصفحة -->
+  <header class="bg-indigo-700 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">📄 عرض نتائج الاختبارات</h1>
+    <p class="mt-1 text-sm">قائمة بجميع نتائج الطلبة حسب الدورة والحلقة والاختبار</p>
+  </header>
+
+  <!-- فلاتر -->
+  <main class="p-6 max-w-6xl mx-auto bg-white mt-8 rounded shadow space-y-6">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <!-- الدورة -->
+      <div>
+        <label class="block font-medium mb-1">اختر الدورة</label>
+        <select class="w-full border rounded px-4 py-2">
+          <option>كل الدورات</option>
+          <option>رمضان 1446هـ</option>
+          <option>صيف 2025م</option>
+          <option>الفصل الأول 2025م</option>
+        </select>
+      </div>
+
+      <!-- الحلقة -->
+      <div>
+        <label class="block font-medium mb-1">اختر الحلقة</label>
+        <select class="w-full border rounded px-4 py-2">
+          <option>كل الحلقات</option>
+          <option>حلقة الفرقان</option>
+          <option>حلقة النور</option>
+        </select>
+      </div>
+
+      <!-- نوع الاختبار -->
+      <div>
+        <label class="block font-medium mb-1">نوع الاختبار</label>
+        <select class="w-full border rounded px-4 py-2">
+          <option>الكل</option>
+          <option>اختبار شفوي</option>
+          <option>اختبار تحريري</option>
+          <option>اختبار نهاية الفصل</option>
+        </select>
+      </div>
+
+      <!-- التاريخ -->
+      <div>
+        <label class="block font-medium mb-1">تاريخ الاختبار</label>
+        <input type="date" class="w-full border rounded px-4 py-2" />
+      </div>
+    </div>
+
+    <!-- جدول النتائج -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-center border mt-4">
+        <thead class="bg-gray-100 text-gray-700">
+          <tr>
+            <th class="p-2 border">#</th>
+            <th class="p-2 border">اسم الطالب</th>
+            <th class="p-2 border">الدورة</th>
+            <th class="p-2 border">الحلقة</th>
+            <th class="p-2 border">نوع الاختبار</th>
+            <th class="p-2 border">الدرجة</th>
+            <th class="p-2 border">التاريخ</th>
+            <th class="p-2 border">ملاحظات</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-2 border">1</td>
+            <td class="p-2 border">عبد الله أحمد</td>
+            <td class="p-2 border">رمضان 1446هـ</td>
+            <td class="p-2 border">الفرقان</td>
+            <td class="p-2 border">شفوي</td>
+            <td class="p-2 border text-green-700 font-bold">95 / 100</td>
+            <td class="p-2 border">2025-07-10</td>
+            <td class="p-2 border">ممتاز جدًا</td>
+          </tr>
+          <tr>
+            <td class="p-2 border">2</td>
+            <td class="p-2 border">سلمان يوسف</td>
+            <td class="p-2 border">صيف 2025م</td>
+            <td class="p-2 border">النور</td>
+            <td class="p-2 border">تحريري</td>
+            <td class="p-2 border text-yellow-700 font-bold">78 / 100</td>
+            <td class="p-2 border">2025-07-10</td>
+            <td class="p-2 border">يحتاج تحسين</td>
+          </tr>
+          <!-- المزيد من الصفوف -->
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- تذييل -->
+  <footer class="bg-indigo-700 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+
+</body>
+</html>

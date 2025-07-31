@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إضافة طالب جديد - مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+
+  <!-- رأس الصفحة -->
+  <header class="bg-green-700 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">➕ إضافة طالب جديد</h1>
+    <p class="mt-1 text-sm">يرجى تعبئة البيانات بدقة لإضافة طالب جديد إلى النظام</p>
+  </header>
+
+  <!-- أزرار التنقل -->
+  <div class="flex flex-wrap justify-center gap-4 my-6 px-4">
+    <a href="manage-students.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">🔙 إدارة الطلاب</a>
+    <a href="admin_dashboard.html" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded shadow">📊 لوحة التحكم</a>
+    <a href="index.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow">🏠 الصفحة الرئيسية</a>
+    <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded shadow">🚪 تسجيل الخروج</a>
+  </div>
+
+  <!-- النموذج -->
+  <main class="max-w-3xl mx-auto bg-white p-6 rounded shadow space-y-6">
+    <form>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="font-semibold">الاسم الكامل</label>
+          <input type="text" class="w-full border px-4 py-2 rounded mt-1" placeholder="مثال: محمد أحمد يوسف">
+        </div>
+
+        <div>
+          <label class="font-semibold">تاريخ الميلاد</label>
+          <input type="date" class="w-full border px-4 py-2 rounded mt-1">
+        </div>
+
+        <div>
+          <label class="font-semibold">الجنس</label>
+          <select class="w-full border px-4 py-2 rounded mt-1">
+            <option>ذكر</option>
+            <option>أنثى</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="font-semibold">رقم الهاتف</label>
+          <input type="tel" class="w-full border px-4 py-2 rounded mt-1" placeholder="مثال: 965XXXXXXXX">
+        </div>
+
+        <div>
+          <label class="font-semibold">ولي الأمر</label>
+          <input type="text" class="w-full border px-4 py-2 rounded mt-1" placeholder="اسم ولي الأمر">
+        </div>
+
+        <div>
+          <label class="font-semibold">الحلقة</label>
+          <select class="w-full border px-4 py-2 rounded mt-1">
+            <option>الفرقان</option>
+            <option>النور</option>
+            <option>المتميزات</option>
+            <option>أونلاين</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label class="font-semibold">ملاحظات</label>
+        <textarea rows="3" class="w-full border px-4 py-2 rounded mt-1" placeholder="ملاحظات إضافية عن الطالب..."></textarea>
+      </div>
+
+      <div class="text-center mt-6">
+        <button type="submit" class="bg-green-700 hover:bg-green-800 text-white px-6 py-2 rounded shadow">
+          💾 حفظ الطالب
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- التذييل -->
+  <footer class="bg-green-700 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+
+</body>
+</html>

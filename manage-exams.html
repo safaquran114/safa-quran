@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إدارة نتائج الاختبارات - مركز الصفا</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <div class="container mx-auto px-6 py-8">
+    <h1 class="text-2xl font-bold mb-6 text-center">📝 إدارة نتائج الاختبارات</h1>
+
+    <form class="bg-white rounded-lg shadow-md p-6 space-y-4">
+      
+      <!-- اختيار الحلقة -->
+      <div>
+        <label class="block font-semibold mb-1">الحلقة</label>
+        <select class="w-full border border-gray-300 rounded px-3 py-2">
+          <option>اختر الحلقة</option>
+          <option>حلقة الفرقان</option>
+          <option>حلقة الصفوة</option>
+          <option>حلقة الإسناد</option>
+          <option>نخبة الصفا</option>
+          <option>حلقة التأسيس</option>
+          <option>حلقة أونلاين 1</option>
+        </select>
+      </div>
+
+      <!-- اختيار الطالب -->
+      <div>
+        <label class="block font-semibold mb-1">اسم الطالب</label>
+        <select class="w-full border border-gray-300 rounded px-3 py-2">
+          <option>اختر الطالب</option>
+          <option>محمد يوسف</option>
+          <option>خالد أحمد</option>
+          <option>عبدالله فهد</option>
+        </select>
+      </div>
+
+      <!-- درجات -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label class="block font-semibold mb-1">درجة الحفظ (من 30)</label>
+          <input type="number" max="30" min="0" class="w-full border rounded px-3 py-2">
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">درجة التجويد (من 20)</label>
+          <input type="number" max="20" min="0" class="w-full border rounded px-3 py-2">
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">درجة السلوك (من 10)</label>
+          <input type="number" max="10" min="0" class="w-full border rounded px-3 py-2">
+        </div>
+      </div>
+
+      <!-- الدورة -->
+      <div>
+        <label class="block font-semibold mb-1">الدورة الدراسية</label>
+        <input type="text" class="w-full border rounded px-3 py-2" placeholder="مثال: الدورة الصيفية 2025">
+      </div>
+
+      <!-- ملاحظات -->
+      <div>
+        <label class="block font-semibold mb-1">ملاحظات المحفظ</label>
+        <textarea class="w-full border rounded px-3 py-2" rows="3"></textarea>
+      </div>
+
+      <!-- زر الحفظ -->
+      <div class="text-center">
+        <button type="submit" class="bg-blue-600 text-white font-bold px-6 py-2 rounded hover:bg-blue-700">
+          💾 حفظ النتيجة
+        </button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

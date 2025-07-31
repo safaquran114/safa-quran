@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>إدارة الحلقات - مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+
+  <!-- رأس الصفحة -->
+  <header class="bg-indigo-800 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">📖 إدارة الحلقات</h1>
+    <p class="mt-1 text-sm">إضافة وتعديل الحلقات القرآنية في المركز</p>
+  </header>
+
+  <!-- أزرار العودة -->
+  <div class="flex flex-wrap justify-center gap-4 my-6 px-4">
+    <a href="index.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow">🏠 الصفحة الرئيسية</a>
+    <a href="admin_dashboard.html" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded shadow">📊 لوحة التحكم</a>
+    <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded shadow">🚪 تسجيل الخروج</a>
+  </div>
+
+  <!-- محتوى الصفحة -->
+  <main class="max-w-6xl mx-auto bg-white p-6 rounded shadow">
+
+    <!-- أدوات الإدارة -->
+    <div class="flex justify-between items-center mb-4">
+      <input type="text" placeholder="🔍 ابحث عن الحلقة..." class="border rounded px-4 py-2 w-full max-w-md">
+      <a href="add-class.html" class="bg-indigo-700 hover:bg-indigo-800 text-white px-4 py-2 rounded shadow ml-4">➕ إضافة حلقة</a>
+    </div>
+
+    <!-- جدول الحلقات -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm text-center border border-gray-300">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="p-2 border">اسم الحلقة</th>
+            <th class="p-2 border">النوع</th>
+            <th class="p-2 border">المحفظ</th>
+            <th class="p-2 border">عدد الطلاب</th>
+            <th class="p-2 border">إجراءات</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y">
+          <tr>
+            <td class="p-2 border">النور</td>
+            <td class="p-2 border">ذكور</td>
+            <td class="p-2 border">الشيخ عبد الله</td>
+            <td class="p-2 border">15</td>
+            <td class="p-2 border space-x-2 space-x-reverse">
+              <a href="view-class.html" class="text-blue-600 hover:underline">عرض</a>
+              <a href="edit-class.html" class="text-yellow-600 hover:underline">تعديل</a>
+              <a href="archive-class.html" class="text-red-600 hover:underline">أرشفة</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- التذييل -->
+  <footer class="bg-indigo-800 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+
+</body>
+</html>

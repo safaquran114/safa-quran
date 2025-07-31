@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>لوحة المدير - مركز الصفا القرآني</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+
+  <!-- رأس الصفحة -->
+  <header class="bg-blue-900 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">🎓 لوحة تحكم المدير</h1>
+    <p class="mt-1 text-sm">مرحباً بك في النظام الإداري لمركز الصفا القرآني</p>
+  </header>
+
+  <!-- المحتوى -->
+  <main class="max-w-6xl mx-auto mt-8 p-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- إدارة الطلاب -->
+      <a href="manage-students.html" class="bg-white hover:bg-blue-50 rounded-lg shadow p-4 flex flex-col items-center transition">
+        <span class="text-blue-700 text-4xl mb-2">👨‍🎓</span>
+        <span class="font-bold text-gray-800">إدارة الطلاب</span>
+        <span class="text-sm text-gray-500">عرض وتعديل بيانات الطلاب</span>
+      </a>
+
+      <!-- إدارة المعلمين -->
+      <a href="manage-teachers.html" class="bg-white hover:bg-green-50 rounded-lg shadow p-4 flex flex-col items-center transition">
+        <span class="text-green-700 text-4xl mb-2">👨‍🏫</span>
+        <span class="font-bold text-gray-800">إدارة المعلمين</span>
+        <span class="text-sm text-gray-500">إضافة أو تعديل بيانات المحفظين</span>
+      </a>
+
+      <!-- إدارة الحلقات -->
+      <a href="manage-classes.html" class="bg-white hover:bg-yellow-50 rounded-lg shadow p-4 flex flex-col items-center transition">
+        <span class="text-yellow-600 text-4xl mb-2">🏫</span>
+        <span class="font-bold text-gray-800">إدارة الحلقات</span>
+        <span class="text-sm text-gray-500">متابعة وتحديث الحلقات</span>
+      </a>
+
+      <!-- إدارة الاختبارات -->
+      <a href="exams.html" class="bg-white hover:bg-purple-50 rounded-lg shadow p-4 flex flex-col items-center transition">
+        <span class="text-purple-700 text-4xl mb-2">📝</span>
+        <span class="font-bold text-gray-800">الاختبارات</span>
+        <span class="text-sm text-gray-500">إنشاء أو تعديل الاختبارات</span>
+      </a>
+
+      <!-- عرض النتائج -->
+      <a href="view-results.html" class="bg-white hover:bg-teal-50 rounded-lg shadow p-4 flex flex-col items-center transition">
+        <span class="text-teal-700 text-4xl mb-2">📊</span>
+        <span class="font-bold text-gray-800">نتائج الطلاب</span>
+        <span class="text-sm text-gray-500">عرض وتحليل النتائج</span>
+      </a>
+
+      <!-- الإشعارات -->
+      <a href="notifications.html" class="bg-white hover:bg-yellow-100 rounded-lg shadow p-4 flex flex-col items-center transition">
+        <span class="text-yellow-600 text-4xl mb-2">🔔</span>
+        <span class="font-bold text-gray-800">الإشعارات</span>
+        <span class="text-sm text-gray-500">تنبيهات الطلاب والمعلمين</span>
+      </a>
+
+      <!-- تقييم المحفظين -->
+      <a href="teacher-evaluation.html" class="bg-white hover:bg-emerald-100 rounded-lg shadow p-4 flex flex-col items-center transition">
+        <span class="text-emerald-600 text-4xl mb-2">📋</span>
+        <span class="font-bold text-gray-800">تقييم المحفظين</span>
+        <span class="text-sm text-gray-500">إدارة الجودة وملاحظات الأداء</span>
+      </a>
+
+      <!-- إدارة الصلاحيات -->
+      <a href="permissions-management.html" class="bg-white hover:bg-red-50 rounded-lg shadow p-4 flex flex-col items-center transition">
+        <span class="text-red-600 text-4xl mb-2">🔐</span>
+        <span class="font-bold text-gray-800">الصلاحيات</span>
+        <span class="text-sm text-gray-500">إدارة أدوار المستخدمين</span>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- التذييل -->
+  <footer class="bg-blue-900 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
+  </footer>
+
+</body>
+</html>

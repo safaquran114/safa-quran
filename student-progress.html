@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تقدم الطالب</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    label, select {
+      font-size: 18px;
+    }
+    canvas {
+      max-width: 700px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📊 رسم بياني لتقدم الطالب</h2>
+
+  <label for="studentSelect">اختر الطالب:</label>
+  <select id="studentSelect">
+    <option value="ahmed">أحمد</option>
+    <option value="eman">إيمان</option>
+    <option value="khaled">خالد</option>
+  </select>
+
+  <canvas id="studentChart"></canvas>
+
+  <script>
+    const ctx = document.getElementById('studentChart').getContext('2d');
+
+    const dataSets = {
+      ahmed: {
+        labels: ["محرم", "ربيع", "رمضان", "ذو القعدة"],
+        data: [75, 85, 90, 95]
+      },
+      eman: {
+        labels: ["محرم", "ربيع", "رمضان", "ذو القعدة"],
+        data: [60, 70, 82, 88]
+      },
+      khaled: {
+        labels: ["محرم", "ربيع", "رمضان", "ذو القعدة"],
+        data: [55, 65, 78, 84]
+      }
+    };
+
+    let currentChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: dataSets.ahmed.labels,
+        datasets: [{
+          label: 'نسبة التقدم',
+          data: dataSets.ahmed.data,
+          fill: true,
+          borderColor: '#2c3e50',
+          backgroundColor: 'rgba(46, 204, 113, 0.2)',
+          tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          title: {
+            display: true,
+            text: 'تقدم الطالب في الحفظ والتجويد'
+          }
+        }
+      }
+    });
+
+    document.getElementById('studentSelect').addEventListener('change', function () {
+      const selected = this.value;
+      currentChart.data.labels = dataSets[selected].labels;
+      currentChart.data.datasets[0].data = dataSets[selected].data;
+      currentChart.update();
+    });
+  </script>
+
+</body>
+</html>

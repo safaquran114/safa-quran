@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تصدير نتائج الطلاب</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            padding: 20px;
+            direction: rtl;
+        }
+        h1 {
+            color: #1e3a8a;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #2563eb;
+            color: white;
+        }
+        button {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 تصدير نتائج الطلاب</h1>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>اسم الطالب</th>
+                <th>الدورة</th>
+                <th>الحلقة</th>
+                <th>درجة الحفظ</th>
+                <th>درجة التجويد</th>
+                <th>ملاحظات</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>أحمد يوسف</td>
+                <td>ربيع 2025</td>
+                <td>حلقة النور</td>
+                <td>95</td>
+                <td>90</td>
+                <td>ممتاز جدًا</td>
+            </tr>
+            <tr>
+                <td>خالد عبد الله</td>
+                <td>ربيع 2025</td>
+                <td>حلقة الفرقان</td>
+                <td>88</td>
+                <td>85</td>
+                <td>جيد جدًا</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="exportToExcel()">📥 تصدير إلى Excel</button>
+    <button onclick="exportToPDF()">📄 تصدير إلى PDF</button>
+
+    <script>
+        function exportToExcel() {
+            var workbook = XLSX.utils.book_new();
+            var ws = XLSX.utils.table_to_sheet(document.getElementById('resultsTable'));
+            XLSX.utils.book_append_sheet(workbook, ws, 'النتائج');
+            XLSX.writeFile(workbook, 'نتائج_الطلاب.xlsx');
+        }
+
+        async function exportToPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            doc.text("نتائج الطلاب", 105, 10, null, null, 'center');
+
+            const rows = [];
+            document.querySelectorAll("#resultsTable tbody tr").forEach(tr => {
+                const row = [];
+                tr.querySelectorAll("td").forEach(td => row.push(td.innerText));
+                rows.push(row);
+            });
+
+            doc.autoTable({
+                head: [['اسم الطالب', 'الدورة', 'الحلقة', 'درجة الحفظ', 'درجة التجويد', 'ملاحظات']],
+                body: rows,
+                startY: 20
+            });
+
+            doc.save('نتائج_الطلاب.pdf');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تسجيل حساب جديد - مركز الصفا</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-8 rounded shadow-md w-full max-w-2xl">
+    <h2 class="text-2xl font-bold mb-6 text-green-700 text-center">إنشاء حساب جديد</h2>
+    
+    <form action="#" method="post" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-semibold mb-1">اسم الطالب</label>
+        <input type="text" class="w-full p-2 border rounded" placeholder="الاسم الكامل"/>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-1">الرقم المدني</label>
+        <input type="text" class="w-full p-2 border rounded" placeholder="1234567890"/>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1">تاريخ الميلاد</label>
+        <input type="date" class="w-full p-2 border rounded"/>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1">الصف الدراسي</label>
+        <input type="text" class="w-full p-2 border rounded" placeholder="الصف الثامن مثلاً"/>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1">رقم هاتف الطالب</label>
+        <input type="text" class="w-full p-2 border rounded"/>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1">رقم هاتف ولي الأمر</label>
+        <input type="text" class="w-full p-2 border rounded"/>
+      </div>
+
+      <div class="md:col-span-2">
+        <label class="block text-sm font-semibold mb-1">اختر الحلقة القريبة</label>
+        
+
+<select class="w-full p-2 border rounded">
+  <option>اختر الحلقة الأقرب أو المناسبة لك...</option>
+
+  <!-- حلقات الإجازة والإسناد وحلقة الصفوة -->
+  <optgroup label="حلقات الإجازة والإسناد + حلقة الصفوة">
+    <option>مسجد جمعة الحسينان - الأندلس (د. خالد الخالدي)</option>
+    <option>مسجد جمعة الحسينان - الأندلس (أحمد سيد هاشم)</option>
+    <option>مسجد المحارب - الفيحاء (عبدالرحمن الشويع)</option>
+    <option>مصلى النساء بمسجد سهل بن حنيف - القرين (سلوى العوضي)</option>
+    <option>حلقة صفوة الصفا (القراءات العشر) - د. خالد الخالدي</option>
+  </optgroup>
+
+  <!-- حلقات نخبة الصفا -->
+  <optgroup label="حلقات نخبة الصفا">
+    <option>مسجد عائشة المحري - المسايل (خالد العيناتي)</option>
+    <option>مسجد المحارب - الفيحاء (عبدالله الشويع)</option>
+    <option>منطقة بيان (سلطان فضل الحكم)</option>
+    <option>منطقة الفنطاس (أسامة الحربي)</option>
+  </optgroup>
+
+  <!-- حلقات الأونلاين -->
+  <optgroup label="حلقات الأونلاين">
+    <option>حلقة أونلاين للنساء (عبير العبدالله)</option>
+  </optgroup>
+
+  <!-- الحلقات النموذجية - البنين -->
+  <optgroup label="الحلقات النموذجية - البنين">
+    <option>مسجد عادلة البحر - المسايل (عبدالله عفيفي هيكل)</option>
+    <option>مسجد دلال النجدي - خيطان (عبدالإله)</option>
+    <option>مسجد عبدالرحمن فارس المطيري - عبدالله المبارك (عبدالله حسين ظاهر)</option>
+    <option>مسجد رفاعة الأنصاري - غرب عبدالله المبارك (حمود فهد صالح)</option>
+    <option>مسجد مسعود بن ربيعة - جابر الأحمد (حمود علي الجلال)</option>
+    <option>مسجد الإمام ابن الصلاح - جابر الأحمد (جابر بشارة)</option>
+    <option>مسجد القرطبي - النسيم (بسام عبيد)</option>
+    <option>مسجد الخنة - تيماء (تركي جزاع)</option>
+  </optgroup>
+
+  <!-- الحلقات النموذجية - البنات -->
+  <optgroup label="الحلقات النموذجية - البنات">
+    <option>مسجد عادلة البحر - المسايل (أماني يوسف)</option>
+    <option>مسجد دلال النجدي - خيطان (عبير حسني)</option>
+    <option>مسجد رفاعة الأنصاري - غرب عبدالله المبارك (علياء جابر عواد)</option>
+    <option>مسجد مبارك الحمد الصباح - القيروان (أنفال جابر عواد)</option>
+    <option>مسجد مسعود بن ربيعة - جابر الأحمد (منال عبدالله سبع)</option>
+    <option>مسجد عامر العازمي - الواحة (عتاب سليمان)</option>
+    <option>مسجد عامر العازمي - الواحة (وفاء سليمان)</option>
+    <option>مسجد عامر العازمي - الواحة (سارة مشرف)</option>
+    <option>مسجد عامر العازمي - الواحة (ريم نصار)</option>
+  </optgroup>
+
+  <!-- حلقات تأسيس اللغة العربية -->
+  <optgroup label="حلقات تأسيس اللغة العربية">
+    <option>حلقة تأسيس اللغة العربية - البنين</option>
+    <option>حلقة تأسيس اللغة العربية - البنات</option>
+  </optgroup>
+
+</select>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1">كلمة المرور</label>
+        <input type="password" class="w-full p-2 border rounded"/>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1">تأكيد كلمة المرور</label>
+        <input type="password" class="w-full p-2 border rounded"/>
+      </div>
+
+      <div class="md:col-span-2">
+        <button class="w-full py-2 bg-green-600 text-white font-bold rounded hover:bg-green-700">إنشاء الحساب</button>
+      </div>
+    </form>
+
+    <p class="mt-4 text-center text-sm text-gray-500">هل لديك حساب؟ <a href="login.html" class="text-green-600 hover:underline">تسجيل الدخول</a></p>
+  </div>
+window.location.href = "dashboard.html";
+
+</body>
+</html>
