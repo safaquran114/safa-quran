@@ -1,67 +1,46 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>لوحة التحكم - مركز الصفا القرآني</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 font-sans min-h-screen">
 
   <!-- رأس الصفحة -->
-  <header class="bg-sky-800 text-white p-6 text-center shadow">
-    <h1 class="text-3xl font-bold">📋 لوحة التحكم العامة</h1>
-    <p class="mt-1 text-sm">مرحبًا بك في مركز الصفا القرآني - اختر القسم الذي ترغب بإدارته</p>
+  <header class="bg-indigo-800 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">📊 لوحة التحكم العامة</h1>
+    <p class="text-sm mt-1">اختر نوع لوحة التحكم للدخول إلى النظام</p>
   </header>
 
-  <!-- المحتوى -->
-  <main class="p-6 max-w-7xl mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- البطاقات -->
+  <main class="p-6 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    <!-- بطاقة الطلاب -->
-    <a href="manage-students.html" class="block bg-white hover:bg-blue-50 rounded-lg shadow p-6 text-center border border-blue-200 transition">
-      <div class="text-blue-700 text-4xl mb-2">👨‍🎓</div>
-      <h2 class="text-xl font-bold text-gray-800">إدارة الطلبة</h2>
-      <p class="text-sm text-gray-500 mt-2">عرض وإضافة وتعديل بيانات الطلاب</p>
-    </a>
+      <!-- بطاقة المدير -->
+      <a href="admin_dashboard.html" class="bg-white rounded-lg shadow p-6 hover:bg-gray-50 transition duration-200 text-center">
+        <h2 class="text-xl font-bold text-indigo-700 mb-2">🧑‍💼 لوحة المدير</h2>
+        <p class="text-gray-600 text-sm">إدارة النظام وكافة الصلاحيات</p>
+      </a>
 
-    <!-- بطاقة المعلمين -->
-    <a href="manage-teachers.html" class="block bg-white hover:bg-green-50 rounded-lg shadow p-6 text-center border border-green-200 transition">
-      <div class="text-green-700 text-4xl mb-2">👨‍🏫</div>
-      <h2 class="text-xl font-bold text-gray-800">إدارة المعلمين</h2>
-      <p class="text-sm text-gray-500 mt-2">تحديث معلومات المحفظين والإشراف</p>
-    </a>
+      <!-- بطاقة المحفظ -->
+      <a href="teacher_dashboard.html" class="bg-white rounded-lg shadow p-6 hover:bg-gray-50 transition duration-200 text-center">
+        <h2 class="text-xl font-bold text-green-700 mb-2">📖 لوحة المحفظ</h2>
+        <p class="text-gray-600 text-sm">متابعة الحلقات والطلبة</p>
+      </a>
 
-    <!-- بطاقة الحلقات -->
-    <a href="manage-classes.html" class="block bg-white hover:bg-yellow-50 rounded-lg shadow p-6 text-center border border-yellow-300 transition">
-      <div class="text-yellow-600 text-4xl mb-2">📚</div>
-      <h2 class="text-xl font-bold text-gray-800">إدارة الحلقات</h2>
-      <p class="text-sm text-gray-500 mt-2">تنظيم وإنشاء الحلقات الدراسية</p>
-    </a>
+      <!-- بطاقة ولي الأمر / الطالب -->
+      <a href="student_dashboard.html" class="bg-white rounded-lg shadow p-6 hover:bg-gray-50 transition duration-200 text-center">
+        <h2 class="text-xl font-bold text-purple-700 mb-2">👨‍👩‍👧‍👦 لوحة ولي الأمر / الطالب</h2>
+        <p class="text-gray-600 text-sm">عرض الإنجاز والتقارير والواجبات</p>
+      </a>
 
-    <!-- بطاقة الاختبارات -->
-    <a href="manage-exams.html" class="block bg-white hover:bg-indigo-50 rounded-lg shadow p-6 text-center border border-indigo-300 transition">
-      <div class="text-indigo-700 text-4xl mb-2">📝</div>
-      <h2 class="text-xl font-bold text-gray-800">الاختبارات والنتائج</h2>
-      <p class="text-sm text-gray-500 mt-2">تسجيل ومتابعة نتائج الطلبة</p>
-    </a>
-
-    <!-- بطاقة الحضور -->
-    <a href="attendance-management.html" class="block bg-white hover:bg-purple-50 rounded-lg shadow p-6 text-center border border-purple-300 transition">
-      <div class="text-purple-700 text-4xl mb-2">📆</div>
-      <h2 class="text-xl font-bold text-gray-800">إدارة الحضور</h2>
-      <p class="text-sm text-gray-500 mt-2">تسجيل ومتابعة حضور الطلاب</p>
-    </a>
-
-    <!-- بطاقة التقارير -->
-    <a href="student-report.html" class="block bg-white hover:bg-rose-50 rounded-lg shadow p-6 text-center border border-rose-300 transition">
-      <div class="text-rose-700 text-4xl mb-2">📈</div>
-      <h2 class="text-xl font-bold text-gray-800">تقارير الأداء</h2>
-      <p class="text-sm text-gray-500 mt-2">عرض تقارير فردية وشاملة للطلاب</p>
-    </a>
-
+    </div>
   </main>
 
-  <!-- تذييل -->
-  <footer class="bg-sky-800 text-white text-center py-4 mt-12">
+  <!-- التذييل -->
+  <footer class="bg-indigo-800 text-white text-center py-4 mt-12">
     <p>&copy; 2025 مركز الصفا القرآني - جميع الحقوق محفوظة</p>
   </footer>
 
